@@ -1,0 +1,182 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 18 abr 2023, 17:30:22
+    Author     : Miguel Sal Fernández
+*/
+.titulo-banner{
+    font-style: italic;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    margin-top:-90px;
+    z-index: 1; /* ReqS22 */
+}
+#titulo IMPORTANTE/* ReqC3, ReqS5 */
+{
+    font-size: 18pt;
+}
+.texto{
+    margin-left:60px;
+    padding:40px;
+    z-index: 2;
+}
+.texto p {
+    text-indent: 20px;
+    opacity: 0.8;
+}
+.texto p::first-line {
+    font-weight: 500;
+}/* ReqC14 */
+.texto::first-letter {
+    border-width: 2px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+/* Establecemos los valores de ancho, color y estilo para los bordes superior e inferior */
+.texto::first-letter::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ff0000;
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+
+/* Establecemos los valores de ancho, color y estilo para los bordes izquierdo y derecho */
+.texto::first-letter::after {
+    content: "";
+    display: block;
+    width: 2px;
+    background-color: #ff0000;
+    margin-left: -2px;
+    margin-right: 2px;
+}/*  ReqC13*/
+
+.div p{/* ReqC10 */
+    margin-left:1px;
+}
+
+.menu-lateral{
+    position: fixed;
+    left: 0;
+    top: 195px;
+    width: 125px;
+    height: 100%;
+    background-color: gray;
+    padding: 20px;
+    z-index: 1; /* ReqS22 */
+}
+
+
+.menu-lateral li {
+    margin-bottom: 10px;
+
+    list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
+}
+.menu-lateral li:hover{
+    background-color: whitesmoke;
+}
+
+.menu-lateral a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.menu-lateral a:hover{
+    color: red;
+}
+.IMPORTANTE/* ReqC1 */
+{
+    color: red;
+}
+.IMPORTANTE p/* ReqS2 */
+{
+    font-family: Arial;
+}
+.IMPORTANTE h1/* ReqC7 */
+{
+    font-family: sans-serif;
+    text-align: center;
+}
+.lista-ordenada {
+    list-style-type: decimal-leading-zero;/* ReqC16 */
+}
+.lista-ordenada li:first-of-type,
+.lista-ordenada li:last-of-type {
+    font-weight: bold;
+    list-style-position: inside; /* ReqS18 */
+}
+
+.lista-ordenada li {
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.p strong/* ReqS9 */
+{
+    text-decoration: underline;
+}
+.enlace :link{
+    color:red;
+}/* ReqC11 */
+.enlace :visited {
+    color: purple;
+}
+.enlace :active {
+    color: greenyellow;
+}
+.enlace :hover {
+    color: greenyellow;
+}
+.tablas
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    caption-side: bottom;
+}/*ReqC20*/
+.tablas th, .tablas td
+{
+    border: 1px solid seashell;
+    padding: 9px;
+
+}
+.family-container {
+    max-width: 500px;
+    margin-bottom: 30px;
+
+    padding: 10px;
+}
+
+.formulario
+{
+    border: 2px solid black;
+    background-color: firebrick;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.formulario div
+{
+    padding:10px;
+}
+.formulario fieldset
+{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.formulario input:focus, select:focus {
+    background-color: yellow;
+}
+
+.formulario input:not(:focus), select:not(:focus) {
+    background-color: white;
+}
