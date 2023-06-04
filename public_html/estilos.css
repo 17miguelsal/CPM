@@ -23,6 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     margin-left:60px;
     padding:40px;
     z-index: 2;
+    flex: 1;
 }
 .texto p {
     text-indent: 20px;
@@ -64,37 +65,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     margin-left:1px;
 }
 
+
+/* Menú Lateral */
+
 .menu-lateral{
     position: fixed;
     left: 0;
-    top: 195px;
+    top: 0;
+    bottom: 0;
     width: 125px;
-    height: 100%;
-    background-color: gray;
+    background-color: rgba(0,0,0,0.5);
     padding: 20px;
-    z-index: 1; /* ReqS22 */
+    overflow: hidden;
+    
 }
 
-
-.menu-lateral li {
-    margin-bottom: 10px;
-
-    list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
+.menu-lateral nav{
+    transform: translateY(15%);
+    overflow: hidden;
 }
-.menu-lateral li:hover{
-    background-color: whitesmoke;
-}
-
 .menu-lateral a {
     display: block;
-    color: #333;
     text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-left: solid transparent;
     border-radius: 5px;
-
+    
 }
 .menu-lateral a:hover{
-    color: red;
+    border-left:solid appworkspace;
+    background: black;
 }
+.menu-lateral ul{
+    margin-top:380px;
+}
+.menu-lateral li {
+    list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
+}
+
+
+
+
 .IMPORTANTE/* ReqC1 */
 {
     color: red;

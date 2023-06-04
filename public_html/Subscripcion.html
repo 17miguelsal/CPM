@@ -23,6 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 top: 0;
                 left: 0;
                 width: 100%;
+                z-index: 1; /*ReqS22*/
             }
         </style>
     </head>
@@ -60,7 +61,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <label for="tel">Teléfono: </label><!-- ReqF9 -->
                         <input type="tel" name="tel" id="tel">
                     </div>
-                    <div>
+                    <div> <!-- ReqF11 -->
                         <label>Genero: </label>
                         <input type="radio" id="o1" name="genero" value="Masculino">
                         <label for="o1">Masculino</label><br>
@@ -75,8 +76,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <label for="residencia">Residente en Poniente: </label>
                         <input type="checkbox" name="residencia" id="residencia" required> <!-- ReqF12 -->
                     </div>
+                    <div><!-- ReqF10 -->
+                        <label for="sitio-web"> Perfil web: </label>
+                        <input type="url" name="sitio-web" id="sitio-web" style="width: 280px; " placeholder="Perfil de Facebook, Página web personal...">
+                    </div>
                     <div>
-                        <label for="email">Dominio: </label>
+                        <label for="email">Correo: </label>
                         <input type="email" name="correo" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" style="width: 220px;" placeholder="caminanteblanco@cuervomail.po" required>
                     </div>
                     <div>
@@ -143,16 +148,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 </div>
             </fieldset>
         </form>
+        <aside class="menu-lateral">
+                <ul>
+                    <li><a href="Principal.html">Home</a></li>
+                    <li><a href="Familias.html">Familias</a></li><!-- ReqH15, ReqH13 -->
+                    <li><a href="Subscripcion.html">Subscribción</a></li><!-- ReqH15 -->
+                    <li><a href="mailto:uo283179@uniovi.es?subject=Pregunta de lector">Contacto</a></li><!-- ReqH14 -->
+                    <li><a href="https://es.wikipedia.org/wiki/Juego_de_tronos" target="_blank">Wikipedia</a></li><!-- ReqH11 -->
+                </ul>
+        </aside>
     </body>
-
-    <nav class="menu-lateral">
-        <ul>
-            <li><a href="Principal.html">Home</a></li>
-            <li><a href="Familias.html">Familias</a></li>
-            <li><a href="Subscripcion.html">Subscribción</a></li>
-            <li><a href="mailto:uo283179@uniovi.es?subject=Pregunta de lector">Contacto</a></li>
-            <li><a href="https://es.wikipedia.org/wiki/Juego_de_tronos" target="_blank">Wikipedia</a></li>
-        </ul>
-    </nav>
-</body>
 </html>
