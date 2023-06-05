@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Subscripción</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Miguel Sal Fernández" name = "author">
+        <link rel="stylesheet" href="estilos.css">
+        <script language="JavaScript" src="miJS.js"></script>
+        <script language="JavaScript" src="Il8n.js"></script>
+        <style>
+            body{
+                background-color: black;
+                padding: 160px;
+                background-image: url('./media/mapa-juego-de-tronos.png'); /*ReqS15*/
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1; /*ReqS22*/
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="./media/BANNER4.jpg" alt="Banner1" style="width: 100%">
+                <p class="titulo-banner">GAME OF THRONES</p>
+            </div>
+        </header>
+        <script><!-- ReqF23, ReqJ24 -->
+            document.addEventListener('keydown', cambiarPagina);
+        </script>
+        <div style="padding: 10%">
+            <h1> SUBSCRIBE</h1>
+            <form class="formulario" name="miFormulario" id="miFormulario" autocomplete="off" action="mailto:tyrionlannister@cuervomail.po" enctype="text/plain" method="post" target="_blank" novalidate style="font-weight: bold;"><!-- ReqF1, ReqF2, ReqF3(navegadoreds como chrome pueden ignorar el autocomplete="off"), ReqF4, ReqF5 -->
+                <fieldset style="margin-bottom: 2px"><!-- ReqF6 -->
+                    <legend>Personal Information</legend> 
+                    <div>
+                        <label for="name">Name: </label><!-- ReqF7 -->
+                        <input type="text" name="name" id="name" pattern="[a-zA-Z]{2,}" oninput="validarNombre('miFormulario', 'name')" style="width: 60px" required>
+                        <label for="surname">Surname: </label>
+                        <input type="text" name="surname" id="surname" pattern="[a-zA-Z]{6,}" oninput="validarNombre('miFormulario', 'surname')" style="width: 110px;" required>
+                        <p id="alerta" style="opacity:60%; font-family: arial"></p><!-- ReqF18 -->
+                    </div>
+                    <div>
+                        <label for="password">Pasword: </label><!-- ReqF8 -->
+                        <input type="password" name="password" id="password" style="width:80px" required>
+                    </div>
+                    <div>
+                        <label for="date">Birthdate: </label>
+                        <input type="date" name="fecha" id="date">
+                    </div>
+                    <div>
+                        <label for="tel">Phone number: </label><!-- ReqF9 -->
+                        <input type="tel" name="tel" id="tel">
+                    </div>
+                    <div> <!-- ReqF11 -->
+                        <label>Gender: </label>
+                        <input type="radio" id="o1" name="genero" value="Masculino">
+                        <label for="o1">Male</label><br>
+                        <input type="radio" id="o2" name="genero" value="Femenino">
+                        <label for="o2">Female</label><br>
+                        <input type="radio" id="o3" name="genero" value="Dragón" checked>
+                        <label for="o3">Dragon</label><br>
+                        <input type="radio" id="o4" name="genero" value="Otro">
+                        <label for="o4">Other</label><br>
+                    </div>
+                    <div>
+                        <label for="residencia">Resident in Westeros: </label>
+                        <input type="checkbox" name="residencia" id="residencia" required> <!-- ReqF12 -->
+                    </div>
+                    <div><!-- ReqF10 -->
+                        <label for="sitio-web"> Website: </label>
+                        <input type="url" name="sitio-web" id="sitio-web" style="width: 280px; " placeholder="Facebook Account, Personal Website...">
+                    </div>
+                    <div>
+                        <label for="email">Mail: </label>
+                        <input type="email" name="correo" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" style="width: 220px;" placeholder="whitewalker@ravenmail.we" required>
+                    </div>
+                    <div>
+                        <label for="hora">Time to attack Casterly Rock</label><!-- ReqF16 -->
+                        <input type="time" name="hora" id="hora">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="foto">Profile pic: </label>
+                        <input type="file" name="foto" id="foto"><!-- ReqF15 -->
+                    </div>
+
+                    <div>
+                        <label>¡Choose your´s favouorite house!</label>
+                        <select> <!-- ReqF14 -->
+                            <option value="">Selectan option</option>
+                            <option value="opcion1">Stark House</option>
+                            <option value="opcion2">Lannister House</option>
+                            <option value="opcion3">Targaryen House</option>
+                            <option value="opcion4">Baratheon House</option>
+                            <option value="opcion5">Tyrell House</option>
+                            <option value="opcion6">Arryn House</option>
+                            <option value="opcion7">Tully House</option>
+                            <option value="opcion8">Mormont House</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Color: </label>
+                        <select> <!-- ReqF13 -->
+                            <option value="o1">Rojo</option>
+                            <option value="o2">Negro</option>
+                            <option value="o3">Verde</option>
+                            <option value="o4">Dorado</option>
+                        </select>
+                    </div>
+                    <div style="padding:10px"><!-- ReqF17 -->
+                        <input type="submit" value="Enviar" >
+                        <input type="reset" value="Reiniciar">
+                    </div>
+                    <div>
+                        <p>Press Alt+P for returning homepage.</p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
+            <fieldset>
+                <p>Introduce 3 valores numéricos:</p>
+                <div>
+                    <label for="valor1">Valor 1: </label>
+                    <input name="valor1" id="valor1" type="number">
+                </div>
+                <div>
+                    <label for="valor2">Valor 2: </label>
+                    <input name="valor2" id="valor2" type="number">
+                </div>
+                <div>
+                    <label for="valor3">Valor 3: </label>
+                    <input name="valor3" id="valor3" type="number">
+                </div>
+                <div>
+                    <button type="button" onclick="alerta()" style="display: block">Sumar</button><!-- ReqF27, ReqJ28 -->
+                </div>
+            </fieldset>
+        </form>
+        <aside class="menu-lateral">
+            <ul>
+                <li><a href="Principal.html">Home</a></li>
+                <li><a href="Familias.html">Families</a></li><!-- ReqH15, ReqH13 -->
+                <li><a href="Subscripcion_es.html">Subscribtion</a></li><!-- ReqH15 -->
+                <li><a href="mailto:uo283179@uniovi.es?subject=Pregunta de lector">Contacto</a></li><!-- ReqH14 -->
+                <li><a href="https://es.wikipedia.org/wiki/Juego_de_tronos" target="_blank">Wikipedia</a></li><!-- ReqH11 -->
+                <li>
+                    <label style="color: aquamarine">Language</label>
+                    <select id="selectorIdioma" onchange="cambioIdioma()"> <!-- ReqI1 -->
+                        <option value="Subscription_en.html">Inglés</option>
+                        <option value="Subscripcion_es.html">Español</option>
+
+                    </select>
+                </li>
+            </ul>
+        </aside>
+    </body>
+</html>

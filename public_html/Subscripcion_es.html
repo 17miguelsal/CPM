@@ -11,6 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta content="Miguel Sal Fernández" name = "author">
         <link rel="stylesheet" href="estilos.css">
         <script language="JavaScript" src="miJS.js"></script>
+        <script language="JavaScript" src="Il8n.js"></script>
         <style>
             body{
                 background-color: black;
@@ -152,9 +153,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <ul>
                 <li><a href="Principal.html">Home</a></li>
                 <li><a href="Familias.html">Familias</a></li><!-- ReqH15, ReqH13 -->
-                <li><a href="Subscripcion.html">Subscribción</a></li><!-- ReqH15 -->
+                <li><a href="Subscripcion_es.html">Subscribción</a></li><!-- ReqH15 -->
                 <li><a href="mailto:uo283179@uniovi.es?subject=Pregunta de lector">Contacto</a></li><!-- ReqH14 -->
                 <li><a href="https://es.wikipedia.org/wiki/Juego_de_tronos" target="_blank">Wikipedia</a></li><!-- ReqH11 -->
+                <li>
+                    <label style="color: aquamarine">Idioma</label>
+                    <select id="selectorIdioma" onchange="cambioIdioma()"><!-- ReqI1 -->
+                        <option value="Subscripcion_es.html">Español</option>
+                        <option value="Subscription_en.html">Inglés</option>   
+                    </select>
+                </li>
             </ul>
         </aside>
     </body>

@@ -55,11 +55,17 @@ function alerta() {
 
 
 function cambiarPagina(event) {
-  if (event.altKey && event.key === 'p') {
-    window.location.href = 'Principal.html';
-  }
+    if (event.altKey && event.key === 'p') {
+        window.location.href = 'Principal.html';
+    }
 }// ReqF23, ReqJ24
 
 function cambiarFondo(elemento) {
-    elemento.style.backgroundColor = 'blue';
-  }//ReqF25, ReqJ26
+    var colorActual = elemento.style.backgroundColor;
+
+    if (colorActual === "" || colorActual === "firebrick") {
+        elemento.style.backgroundColor = "blue";
+    } else {
+        elemento.style.backgroundColor = "firebrick";
+    }
+}//ReqF25, ReqJ26

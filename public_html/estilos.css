@@ -142,7 +142,7 @@ section > article /* ReqC10 */
 {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: blanchedalmond;
     padding: 20px;
     border-left: solid transparent;
     border-radius: 5px;
@@ -150,16 +150,28 @@ section > article /* ReqC10 */
 .menu-lateral a:hover
 {
     border-left:solid appworkspace;
-    background: black;
+    color: white;
 }
 .menu-lateral ul
 {
-    margin-top:360px;
+    margin-top:300px;
 }
 .menu-lateral li 
 {
     list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
 }
+.menu-lateral li:hover
+{
+    background: black;
+}
+.menu-lateral label:hover
+{
+    border-left:solid appworkspace;   
+}
+
+
+
+
 
 .tablas /*ReqC20*/
 {
