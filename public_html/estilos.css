@@ -6,6 +6,179 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 18 abr 2023, 17:30:22
     Author     : Miguel Sal Fernández
 */
+
+.IMPORTANTE/* ReqC1 */
+{
+    color: red;
+}
+.IMPORTANTE p/* ReqS2 */
+{
+    font-family: Arial, sans-serif;
+}
+.IMPORTANTE h1/* ReqS2,ReqC7 */
+{
+    font-family: sans-serif;
+    text-align: center;
+}
+#titulo /* ReqC3 */
+{ 
+    font-size: 18pt;
+}
+#identificador-2 h1 /* ReqS4 */
+{
+    font-size: 14pt;
+}
+#titulo.IMPORTANTE/* ReqS5 */
+{
+    font-size: 16pt;
+}
+.fuente-normal /* ReqC6 */
+{
+    font-style: normal;
+}
+.texto
+{
+    margin-left:60px;
+    padding:40px;
+    z-index: 2;
+    flex: 1;
+}
+.texto p /*ReqC8*/
+{
+    text-indent: 20px;
+    opacity: 0.8;
+}
+p strong /* ReqS9 */
+{
+    text-decoration: underline;
+}
+section > article /* ReqC10 */
+{
+    margin: 1px;
+    padding: 1px;
+}
+.enlace :link /* ReqC11 */
+{
+    color:red;
+}
+.enlace :visited /* ReqC11 */
+{
+    color: purple;
+}
+.enlace :active 
+{
+    color: greenyellow;
+}
+.enlace :hover /* ReqC11 */
+{
+    color: greenyellow;
+}
+.lista-ordenada 
+{
+    list-style-type: decimal-leading-zero;/* ReqC16 */
+}
+.lista-ordenada li:first-of-type,
+.lista-ordenada li:last-of-type 
+{ /* ReqC12 */
+    font-weight: bold;
+    list-style-position: inside; /* ReqS18 */
+}
+.lista-ordenada li /* ReqC12 */
+{ 
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px gray;
+}
+.texto::first-letter /* ReqC13 */
+{
+    border-width: 2px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 5px;
+}
+.texto::first-letter::before /* ReqC13 */
+{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ff0000;
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+.texto::first-letter::after /* ReqC13 */
+{
+    content: "";
+    display: block;
+    width: 2px;
+    background-color: #ff0000;
+    margin-left: -2px;
+    margin-right: 2px;
+}
+.texto p::first-line /* ReqC14 */
+{
+    font-weight: 500;
+}
+
+
+/* Menú Lateral */
+.menu-lateral
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 125px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow: hidden;  
+}
+.menu-lateral nav
+{
+    transform: translateY(15%);
+    overflow: hidden;
+}
+.menu-lateral a 
+{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-left: solid transparent;
+    border-radius: 5px;
+}
+.menu-lateral a:hover
+{
+    border-left:solid appworkspace;
+    background: black;
+}
+.menu-lateral ul
+{
+    margin-top:360px;
+}
+.menu-lateral li 
+{
+    list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
+}
+
+.tablas /*ReqC20*/
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    caption-side: bottom;
+}
+.tabla caption /* ReqC19 */
+{
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    font-weight: bold; 
+}
+.tablas th, .tablas td /* ReqC20 */
+{
+    border: 1px solid seashell;
+    padding: 9px;
+}
 .titulo-banner{
     font-style: italic;
     font-size: 60px;
@@ -15,156 +188,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     margin-top:-90px;
     z-index: 1; /* ReqS22 */
 }
-#titulo IMPORTANTE/* ReqC3, ReqS5 */
+
+.family-container 
 {
-    font-size: 18pt;
-}
-.texto{
-    margin-left:60px;
-    padding:40px;
-    z-index: 2;
-    flex: 1;
-}
-.texto p {
-    text-indent: 20px;
-    opacity: 0.8;
-}
-.texto p::first-line {
-    font-weight: 500;
-}/* ReqC14 */
-.texto::first-letter {
-    border-width: 2px;
-    border-color: blue;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 3px;
-    margin-right: 5px;
-}
-
-/* Establecemos los valores de ancho, color y estilo para los bordes superior e inferior */
-.texto::first-letter::before {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #ff0000;
-    margin-top: -2px;
-    margin-bottom: 2px;
-}
-
-/* Establecemos los valores de ancho, color y estilo para los bordes izquierdo y derecho */
-.texto::first-letter::after {
-    content: "";
-    display: block;
-    width: 2px;
-    background-color: #ff0000;
-    margin-left: -2px;
-    margin-right: 2px;
-}/*  ReqC13*/
-
-.div p{/* ReqC10 */
-    margin-left:1px;
-}
-
-
-/* Menú Lateral */
-
-.menu-lateral{
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 125px;
-    background-color: rgba(0,0,0,0.5);
-    padding: 20px;
-    overflow: hidden;
-    
-}
-
-.menu-lateral nav{
-    transform: translateY(15%);
-    overflow: hidden;
-}
-.menu-lateral a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 20px;
-    border-left: solid transparent;
-    border-radius: 5px;
-    
-}
-.menu-lateral a:hover{
-    border-left:solid appworkspace;
-    background: black;
-}
-.menu-lateral ul{
-    margin-top:380px;
-}
-.menu-lateral li {
-    list-style-image: url('./media/viñeta1.png'); /* ReqC17 */
-}
-
-
-
-
-.IMPORTANTE/* ReqC1 */
-{
-    color: red;
-}
-.IMPORTANTE p/* ReqS2 */
-{
-    font-family: Arial;
-}
-.IMPORTANTE h1/* ReqC7 */
-{
-    font-family: sans-serif;
-    text-align: center;
-}
-.lista-ordenada {
-    list-style-type: decimal-leading-zero;/* ReqC16 */
-}
-.lista-ordenada li:first-of-type,
-.lista-ordenada li:last-of-type {
-    font-weight: bold;
-    list-style-position: inside; /* ReqS18 */
-}
-
-.lista-ordenada li {
-    text-transform: capitalize;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-.p strong/* ReqS9 */
-{
-    text-decoration: underline;
-}
-.enlace :link{
-    color:red;
-}/* ReqC11 */
-.enlace :visited {
-    color: purple;
-}
-.enlace :active {
-    color: greenyellow;
-}
-.enlace :hover {
-    color: greenyellow;
-}
-.tablas
-{
-    border-collapse: collapse;
-    margin: 0 auto;
-    caption-side: bottom;
-}/*ReqC20*/
-.tablas th, .tablas td
-{
-    border: 1px solid seashell;
-    padding: 9px;
-
-}
-.family-container {
     max-width: 500px;
     margin-bottom: 30px;
-
     padding: 10px;
 }
 

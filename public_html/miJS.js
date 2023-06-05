@@ -51,7 +51,7 @@ function alerta() {
     var v3 = parseFloat(document.getElementById('valor3').value);
     var sum = v1 + v2 + v3;
     alert("La suma de tus parámetros es: " + sum);
-}//ReqF21, ReqF27, ReqJ28
+}//ReqJ21, ReqF27, ReqJ28
 
 
 function cambiarPagina(event) {
