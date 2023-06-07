@@ -228,7 +228,11 @@ section > article /* ReqC10 */
 .formulario input:focus, select:focus {
     background-color: yellow;
 }
-
-.formulario input:not(:focus), select:not(:focus) {
+.formulario input:focus, select:focus:lang(en-GB) /* ReqI17 */
+{
+    background-color: darkorange;
+}
+.formulario input:not(:focus), select:not(:focus) 
+{
     background-color: white;
 }
