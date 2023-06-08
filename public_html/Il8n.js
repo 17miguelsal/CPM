@@ -27,20 +27,17 @@ function muestraDatos(id, id2){
         paragraph.innerHTML = '';
 }
 /* ReqI12 */
-function muestraAprobado(idBloqs, idExpcs, idBool){
-    var bloq = document.getElementById(idBloqs);
-    var ex = document.getElementById(idExpcs);
-    var bool = document.getElementById(idBool);
-    
-    var b = bloq.value;
-    var e = ex.value;
-    
-    if(b>12){
+function muestraAprobado(idBloqs, idExpcs, idR){
+    var bloq = document.getElementById(idBloqs).value;
+    var ex = document.getElementById(idExpcs).value;
+    var nota = document.getElementById(idR);
+  
+    if(bloq>12){
         /* ReqI13 */
-        bool.innerHTML = decimalFormat.format(e+=0.5);
+        nota.innerHTML = decimalFormat.format(ex+=0.5);
     } else{
         /* ReqI13 */
-        bool.innerHTML = decimalFormat.format(e-=0.5);
+        nota.innerHTML = decimalFormat.format(ex-=2.5);
     }
 }
 /* ReqI12 */
@@ -54,7 +51,7 @@ function calcular(idDinero, idFecha, idAdm, idBloqs, idCFinal){
      
      var fechaMañana = new Date(Date.now() + 1000 * 60 * 60 * 24 * 1);
      var segundaMatricula = new Number(162.22);
-     var gastoAdmin = new Number(3);
+     var gastoAdmin = 3;
      var bloques = bloq.value;
      
      dinero.innerHTML = monedaFormat.format(segundaMatricula);

@@ -118,13 +118,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         </select>
                     </div>
                     <div>
-                        <label>Color de perfil: </label>
-                        <select> <!-- ReqF13 -->
-                            <option value="o1">Rojo</option>
-                            <option value="o2">Negro</option>
-                            <option value="o3">Verde</option>
-                            <option value="o4">Dorado</option>
-                        </select>
+                        <label for="colorChooser">Color de perfil: </label>
+                        <input type="color" id="colorChooser" name="colorChooser"> <!-- ReqF13 -->
                     </div>
                     <div style="padding:10px"><!-- ReqF17 -->
                         <input type="submit" value="Enviar" >
@@ -138,8 +133,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </div>
         <div style="padding: 10%">
             <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
-                <fieldset>
-                    <legend>Internacionalización</legend> 
+                <fieldset> 
                     <p>Introduce 3 valores numéricos:</p>
                     <div>
                         <label for="valor1">Valor 1: </label>
@@ -149,7 +143,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <label for="valor2">Valor 2: </label>
                         <input name="valor2" id="valor2" type="number">
                     </div>
-
+                    <div>
+                        <label for="valor3">Valor 3: </label>
+                        <input name="valor3" id="valor3" type="number">
+                    </div>
                     <div>
                         <button type="button" onclick="alerta()" style="display: block">Sumar</button><!-- ReqF27, ReqJ28 -->
                     </div>
@@ -159,7 +156,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <div style="padding: 10%">
             <form class="formulario" name="FormularioIl8n" id="FormularioIl8n" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
                 <fieldset>
-                    <p>Introduce 3 valores numéricos:</p>
+                    <legend>Internacionalización</legend>
                     <div>
                         <label for="Bloqs">Bloques Presentados:  </label>
                         <input name="Bloqs" id="Bloqs" type="number" min="0" max="17" oninput="muestraDatos('Bloqs', 'pB')"><!-- ReqI6 -->
@@ -169,11 +166,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <input name="exps" id="exps" type="number" min="0" max="10" oninput="muestraDatos('exps', 'pE')"><!-- ReqI6 -->
                     </div>
                     <div>
-                        <button type="button" onclick="calcular('dinero','idFecha','idAdm','Bloqs','CFinal')">Calcular</button>
+                        <button type="button" onclick="calcular('dinero', 'idFecha', 'idAdm', 'Bloqs', 'CFinal'); muestraAprobado('Bloqs', 'exps', 'pR')">Calcular</button>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <p>Bloques: <span id="pB"> Expectativas: </span> <span id="pE"></span> Resultado esperado: <span id="pR"></span></p><!-- ReqI8 -->
+                    <p>Bloques:  <span id="pB"></span>  Fé:  <span id="pE"></span>  Resultado esperado: <span id="pR"></span></p><!-- ReqI8 -->
                     <p>
                         Precio Segunda Matrícula:) <span id="dinero"></span><br>
                         Gasto Administrativo: <span id="idAdm"></span><br>
@@ -181,9 +178,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         Coste total: <span id="CFinal"></span><br>
                         <!-- ReqI10 -->
                         Fecha de expiración: <span id="idFecha"></span><br>
-                        
                     </p>
-                    <P></P>
+                    <P style="text-align: center;">Buena Suerte;)</P>
                 </fieldset>
             </form>
         </div>

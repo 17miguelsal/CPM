@@ -5,7 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html lang="en-GB"><!-- ReqI1 -->
     <head>
-        <title>Subscripción</title>
+        <title>Subscription</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Miguel Sal Fernández" name = "author">
@@ -14,10 +14,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <script language="JavaScript" src="Il8n.js"></script>
         <script>
             var MyLocale = 'en-GB';
-            decimalFormat = new Intl.NumberFormat(MyLocale, {maximumFractionDigits: 2}); <!-- ReqI2 -->
-            monedaFormat = new Intl.NumberFormat(MyLocale, {style: 'currency', currency: 'GBP'}); <!-- ReqI3 -->
-            dateShortFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'short'}); <!-- ReqI4 -->
-            dateLongFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'long'}); <!-- ReqI5 -->
+            decimalFormat = new Intl.NumberFormat(MyLocale, {maximumFractionDigits: 2});<!-- ReqI2 -->
+            monedaFormat = new Intl.NumberFormat(MyLocale, {style: 'currency', currency: 'GBP'});<!-- ReqI3 -->
+            dateShortFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'short'});<!-- ReqI4 -->
+            dateLongFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'long'});<!-- ReqI5 -->
         </script>
         <style>
             body{
@@ -58,7 +58,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <p id="alerta" style="opacity:60%; font-family: arial"></p><!-- ReqF18 -->
                     </div>
                     <div>
-                        <label for="password">Pasword: </label><!-- ReqF8 -->
+                        <label for="password">Password: </label><!-- ReqF8 -->
                         <input type="password" name="password" id="password" style="width:80px" required>
                     </div>
                     <div>
@@ -104,27 +104,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                     </div>
 
                     <div>
-                        <label>¡Choose your´s favouorite house!</label>
+                        <label>¡Choose your´s favourite house!</label>
                         <select> <!-- ReqF14 -->
-                            <option value="">Selectan option</option>
-                            <option value="opcion1">Stark House</option>
-                            <option value="opcion2">Lannister House</option>
-                            <option value="opcion3">Targaryen House</option>
-                            <option value="opcion4">Baratheon House</option>
-                            <option value="opcion5">Tyrell House</option>
-                            <option value="opcion6">Arryn House</option>
-                            <option value="opcion7">Tully House</option>
-                            <option value="opcion8">Mormont House</option>
+                            <option value="">Select an option</option>
+                            <option value="opcion1">House Stark</option>
+                            <option value="opcion2">House Lannister</option>
+                            <option value="opcion3">House Targaryen</option>
+                            <option value="opcion4">House Baratheon</option>
+                            <option value="opcion5">House Tyrell</option>
+                            <option value="opcion6">House Arryn</option>
+                            <option value="opcion7">House Tully</option>
+                            <option value="opcion8">House Mormont</option>
                         </select>
                     </div>
                     <div>
-                        <label>Color: </label>
-                        <select> <!-- ReqF13 -->
-                            <option value="o1">Rojo</option>
-                            <option value="o2">Negro</option>
-                            <option value="o3">Verde</option>
-                            <option value="o4">Dorado</option>
-                        </select>
+                        <label for="colorChooser">Color: </label>
+                        <input type="color" id="colorChooser" name="colorChooser"> <!-- ReqF13 -->
                     </div>
                     <div style="padding:10px"><!-- ReqF17 -->
                         <input type="submit" value="Send" >
@@ -136,26 +131,58 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 </fieldset>
             </form>
         </div>
-        <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
-            <fieldset>
-                <p>Introduce 3 valores numéricos:</p>
-                <div>
-                    <label for="valor1">Valor 1: </label>
-                    <input name="valor1" id="valor1" type="number">
-                </div>
-                <div>
-                    <label for="valor2">Valor 2: </label>
-                    <input name="valor2" id="valor2" type="number">
-                </div>
-                <div>
-                    <label for="valor3">Valor 3: </label>
-                    <input name="valor3" id="valor3" type="number">
-                </div>
-                <div>
-                    <button type="button" onclick="alerta()" style="display: block">Sumar</button><!-- ReqF27, ReqJ28 -->
-                </div>
-            </fieldset>
-        </form>
+        <div style="padding: 10%">
+            <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
+                <fieldset>
+                    <p>Insert 3 numbers:</p>
+                    <div>
+                        <label for="valor1">1st Value: </label>
+                        <input name="valor1" id="valor1" type="number">
+                    </div>
+                    <div>
+                        <label for="valor2">2nd Value: </label>
+                        <input name="valor2" id="valor2" type="number">
+                    </div>
+                    <div>
+                        <label for="valor3">3rd Value: </label>
+                        <input name="valor3" id="valor3" type="number">
+                    </div>
+                    <div>
+                        <button type="button" onclick="alerta()" style="display: block">Total</button><!-- ReqF27, ReqJ28 -->
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div style="padding: 10%">
+            <form class="formulario" name="FormularioIl8n" id="FormularioIl8n" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
+                <fieldset>
+                    <legend>Internacionalization</legend>
+                    <div>
+                        <label for="Bloqs">Requirements:  </label>
+                        <input name="Bloqs" id="Bloqs" type="number" min="0" max="17" oninput="muestraDatos('Bloqs', 'pB')"><!-- ReqI6 -->
+                    </div>
+                    <div>
+                        <label for="exps">Hopes(1-10): </label>
+                        <input name="exps" id="exps" type="number" min="0" max="10" oninput="muestraDatos('exps', 'pE')"><!-- ReqI6 -->
+                    </div>
+                    <div>
+                        <button type="button" onclick="calcular('dinero', 'idFecha', 'idAdm', 'Bloqs', 'CFinal'); muestraAprobado('Bloqs', 'exps', 'pR')">Calculate</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p>Bloques:  <span id="pB"></span>  Faith:  <span id="pE"></span>  Expected Calification: <span id="pR"></span></p><!-- ReqI8 -->
+                    <p>
+                        Precio Segunda Matrícula:) <span id="dinero"></span><br>
+                        Office Expenses: <span id="idAdm"></span><br>
+                        <!-- ReqI9 -->
+                        Total Cost: <span id="CFinal"></span><br>
+                        <!-- ReqI10 -->
+                        Payment Due: <span id="idFecha"></span><br>
+                    </p>
+                    <P style="text-align: center;">Good Luck;)</P>
+                </fieldset>
+            </form>
+        </div>
         <aside class="menu-lateral">
             <ul>
                 <li><a href="Principal.html">Home</a></li>

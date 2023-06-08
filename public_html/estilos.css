@@ -38,6 +38,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 .texto
 {
+    position: relative; /* ReqS21 */
     margin-left:60px;
     padding:40px;
     z-index: 2;
