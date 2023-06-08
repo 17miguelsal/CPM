@@ -3,7 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
 -->
-<html lang="es-ES">
+<html lang="es-ES"><!-- ReqI1 -->
     <head>
         <title>Subscripción</title>
         <meta charset="UTF-8">
@@ -165,22 +165,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                         <input name="Bloqs" id="Bloqs" type="number" min="0" max="17" oninput="muestraDatos('Bloqs', 'pB')"><!-- ReqI6 -->
                     </div>
                     <div>
-                        <label for="exps">Expectativas(1-5): </label>
-                        <input name="exps" id="exps" type="number" min="0" max="5" oninput="muestraDatos('exps', 'pE')"><!-- ReqI6 -->
+                        <label for="exps">Expectativas(1-10): </label>
+                        <input name="exps" id="exps" type="number" min="0" max="10" oninput="muestraDatos('exps', 'pE')"><!-- ReqI6 -->
                     </div>
                     <div>
-                        <label for="valor3">Valor 3: </label>
-                        <input name="valor3" id="valor3" type="number">
-                    </div>
-                    <div>
-                        <button type="button" onclick="calcular('dinero','short')" style="display: block">Calcular</button>
+                        <button type="button" onclick="calcular('dinero','idFecha','idAdm','Bloqs','CFinal')">Calcular</button>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <p><span id="pB"></span> <span id="pE"></span></p>
+                    <p>Bloques: <span id="pB"> Expectativas: </span> <span id="pE"></span> Resultado esperado: <span id="pR"></span></p><!-- ReqI8 -->
                     <p>
                         Precio Segunda Matrícula:) <span id="dinero"></span><br>
-                        Fecha de calculo: <span id='short'></span><br>
+                        Gasto Administrativo: <span id="idAdm"></span><br>
+                        <!-- ReqI9 -->
+                        Coste total: <span id="CFinal"></span><br>
+                        <!-- ReqI10 -->
+                        Fecha de expiración: <span id="idFecha"></span><br>
                         
                     </p>
                     <P></P>
