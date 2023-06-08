@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             decimalFormat = new Intl.NumberFormat(MyLocale, {maximumFractionDigits: 2});<!-- ReqI2 -->
             monedaFormat = new Intl.NumberFormat(MyLocale, {style: 'currency', currency: 'EUR'});<!-- ReqI3 -->
             dateShortFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'short'});<!-- ReqI4 -->
-            dateLongFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'long'}); <!-- ReqI5 -->
+            dateLongFormat = new Intl.DateTimeFormat(MyLocale, {dateStyle: 'long'});<!-- ReqI5 -->
         </script>
         <style>
             body{
@@ -136,26 +136,57 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 </fieldset>
             </form>
         </div>
-        <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
-            <fieldset>
-                <p>Introduce 3 valores numéricos:</p>
-                <div>
-                    <label for="valor1">Valor 1: </label>
-                    <input name="valor1" id="valor1" type="number">
-                </div>
-                <div>
-                    <label for="valor2">Valor 2: </label>
-                    <input name="valor2" id="valor2" type="number">
-                </div>
-                <div>
-                    <label for="valor3">Valor 3: </label>
-                    <input name="valor3" id="valor3" type="number">
-                </div>
-                <div>
-                    <button type="button" onclick="alerta()" style="display: block">Sumar</button><!-- ReqF27, ReqJ28 -->
-                </div>
-            </fieldset>
-        </form>
+        <div style="padding: 10%">
+            <form class="formulario" name="Formulario2" id="Formulario2" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
+                <fieldset>
+                    <legend>Internacionalización</legend> 
+                    <p>Introduce 3 valores numéricos:</p>
+                    <div>
+                        <label for="valor1">Valor 1: </label>
+                        <input name="valor" id="valor1" type="number">
+                    </div>
+                    <div>
+                        <label for="valor2">Valor 2: </label>
+                        <input name="valor2" id="valor2" type="number">
+                    </div>
+
+                    <div>
+                        <button type="button" onclick="alerta()" style="display: block">Sumar</button><!-- ReqF27, ReqJ28 -->
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div style="padding: 10%">
+            <form class="formulario" name="FormularioIl8n" id="FormularioIl8n" autocomplete="off" ondblclick="cambiarFondo(this)" method="post" target="_blank" novalidate style="font-weight: bold;" ><!-- ReqF25, ReqJ26-->
+                <fieldset>
+                    <p>Introduce 3 valores numéricos:</p>
+                    <div>
+                        <label for="Bloqs">Bloques Presentados:  </label>
+                        <input name="Bloqs" id="Bloqs" type="number" min="0" max="17" oninput="muestraDatos('Bloqs', 'pB')"><!-- ReqI6 -->
+                    </div>
+                    <div>
+                        <label for="exps">Expectativas(1-5): </label>
+                        <input name="exps" id="exps" type="number" min="0" max="5" oninput="muestraDatos('exps', 'pE')"><!-- ReqI6 -->
+                    </div>
+                    <div>
+                        <label for="valor3">Valor 3: </label>
+                        <input name="valor3" id="valor3" type="number">
+                    </div>
+                    <div>
+                        <button type="button" onclick="calcular('dinero','short')" style="display: block">Calcular</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p><span id="pB"></span> <span id="pE"></span></p>
+                    <p>
+                        Precio Segunda Matrícula:) <span id="dinero"></span><br>
+                        Fecha de calculo: <span id='short'></span><br>
+                        
+                    </p>
+                    <P></P>
+                </fieldset>
+            </form>
+        </div>
         <aside class="menu-lateral">
             <ul>
                 <li><a href="Principal.html">Home</a></li>
