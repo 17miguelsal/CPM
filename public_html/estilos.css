@@ -41,7 +41,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     position: relative; /* ReqS21 */
     margin-left:60px;
     padding:40px;
-    z-index: 2;
     flex: 1;
 }
 .texto p /*ReqC8*/
@@ -172,8 +171,6 @@ section > article /* ReqC10 */
 
 
 
-
-
 .tablas /*ReqC20*/
 {
     border-collapse: collapse;
@@ -236,4 +233,15 @@ section > article /* ReqC10 */
 .formulario input:not(:focus), select:not(:focus) 
 {
     background-color: white;
+}
+
+.leg[lang="en-GB"] /* ReqI17 */
+{
+  color: orange;
+  font-weight: bold;
+}
+.leg[lang="es-ES"] /* ReqI17 */
+{
+  color: yellow;
+  font-weight: bold;
 }
